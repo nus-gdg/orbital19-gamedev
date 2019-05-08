@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CactusSpawner : MonoBehaviour
 {
-    public float WaitTime = 5f;
+    public float WaitTime = 2f;
     public GameObject Cactus;
+    public bool ShouldSpawn = true;
 
     private void Start()
     {
@@ -14,10 +15,10 @@ public class CactusSpawner : MonoBehaviour
 
     private IEnumerator SpawnCactusAtIntervals()
     {
-        while (true)
+        while (ShouldSpawn)
         {
-            yield return new WaitForSeconds(WaitTime);
             Instantiate(Cactus, transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(WaitTime);
         }
     }
 }

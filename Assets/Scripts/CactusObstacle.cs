@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CactusObstacle : MonoBehaviour
 {
-    public float speed = 10f;
+    public static float Speed = 10f;
     private Rigidbody2D cactusRigidbody;
 
     private void Start()
@@ -14,7 +14,7 @@ public class CactusObstacle : MonoBehaviour
 
     private void Update()
     {
-        cactusRigidbody.velocity = new Vector2(-1f, 0) * speed;
+        cactusRigidbody.velocity = new Vector2(-1f, 0) * Speed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

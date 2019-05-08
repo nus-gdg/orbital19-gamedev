@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
     public float JumpVelocity;
+    public UnityEvent PlayerHitEvent;
+
     private Rigidbody2D playerRigidbody;
     private Animator playerAnimator;
+    private bool isDead = false;
 
     private void Start()
     {
@@ -16,6 +20,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (isDead)
+        {
+            return;
+        }
+
         if (Input.GetAxis("Jump") == 1 && transform.position.y < -3.7f)
         {
             playerAnimator.SetBool("Jumping", true);
@@ -25,6 +34,16 @@ public class PlayerController : MonoBehaviour
         if (playerAnimator.GetBool("Jumping") && playerRigidbody.velocity.y == 0.0f)
         {
             playerAnimator.SetBool("Jumping", false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Cactus")
+        {
+            isDead = true;
+            playerAnimator.SetBool("Dead", true);
+            PlayerHitEvent.Invoke();
         }
     }
 }
