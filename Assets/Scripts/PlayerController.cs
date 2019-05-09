@@ -37,9 +37,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.tag == "Cactus")
+        if (other.gameObject.tag == "Cactus")
         {
             isDead = true;
             playerAnimator.SetBool("Dead", true);
