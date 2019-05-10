@@ -9,14 +9,15 @@ public class GameManager : MonoBehaviour
     public PlayerController Player;
     public Text CurrentTime;
     public Text BestTime;
-    public HighScore HighScoreObject;
 
+    private float bestTimeValue;
     private float time = 0;
     private bool hasGameEnded = false;
 
     private void Start()
     {
-        BestTime.text = HighScoreObject.Time.ToString();
+        bestTimeValue = PlayerPrefs.GetFloat("BestTime", 0);
+        BestTime.text = bestTimeValue.ToString();
     }
 
     private void Update()
@@ -27,6 +28,11 @@ public class GameManager : MonoBehaviour
         }
         time += Time.deltaTime;
         CurrentTime.text = time.ToString();
+        if (time > bestTimeValue)
+        {
+            bestTimeValue = time;
+            BestTime.text = bestTimeValue.ToString();
+        }
     }
 
     public void OnPlayerHit()
@@ -34,10 +40,10 @@ public class GameManager : MonoBehaviour
         CactusObstacle.Speed = 0;
         Spawner.ShouldSpawn = false;
         hasGameEnded = true;
-        if (HighScoreObject.Time < time)
+        if (time > PlayerPrefs.GetFloat("BestTime", 0))
         {
-            HighScoreObject.Time = time;
-            BestTime.text = HighScoreObject.Time.ToString();
+            PlayerPrefs.SetFloat("BestTime", time);
+            BestTime.text = time.ToString();
         }
     }
 }

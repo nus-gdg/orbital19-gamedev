@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class PlayerController : MonoBehaviour
 {
     public float JumpVelocity;
-    public UnityEvent PlayerHitEvent;
+    public GameManager GameManagerInstance;
 
     private Rigidbody2D playerRigidbody;
     private Animator playerAnimator;
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
         {
             isDead = true;
             playerAnimator.SetBool("Dead", true);
-            PlayerHitEvent.Invoke();
+            GameManagerInstance.OnPlayerHit();
         }
     }
 }

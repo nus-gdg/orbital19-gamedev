@@ -17,9 +17,9 @@ public class CactusObstacle : MonoBehaviour
         cactusRigidbody.velocity = new Vector2(-1f, 0) * Speed;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.name == "De-Spawner")
+        if (other.gameObject.name == "De-Spawner")
         {
             Destroy(gameObject);
         }

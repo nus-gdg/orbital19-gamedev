@@ -232,6 +232,11 @@ PrefabInstance:
       propertyPath: PlayerHitEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2149580232842502931, guid: fcaaa62a435028548a5708fe5593ac0a,
+        type: 3}
+      propertyPath: GameManagerInstance
+      value: 
+      objectReference: {fileID: 8673353302424648004}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcaaa62a435028548a5708fe5593ac0a, type: 3}
 --- !u!1 &328602322
@@ -647,6 +652,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1196262207}
+  - component: {fileID: 1196262208}
   - component: {fileID: 1196262206}
   m_Layer: 0
   m_Name: De-Spawner
@@ -695,6 +701,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1196262208
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196262205}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1212449285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1116,6 @@ MonoBehaviour:
   Player: {fileID: 2149580233020443813}
   CurrentTime: {fileID: 1296946281}
   BestTime: {fileID: 1212449287}
-  HighScoreObject: {fileID: 11400000, guid: d6a4d2e999cef734c91f3eb9c094977f, type: 2}
 --- !u!1 &8673353302424648005
 GameObject:
   m_ObjectHideFlags: 0
