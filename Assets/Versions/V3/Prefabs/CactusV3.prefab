@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8370646903700219965}
   - component: {fileID: 8370646903700219964}
   - component: {fileID: 8370646903700219967}
-  - component: {fileID: 8370646903700219955}
+  - component: {fileID: 3411946394255478114}
   m_Layer: 0
   m_Name: Cactus
   m_TagString: Cactus
@@ -129,7 +129,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5832553, y: 1.8228555}
   m_EdgeRadius: 0
---- !u!114 &8370646903700219955
+--- !u!114 &3411946394255478114
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

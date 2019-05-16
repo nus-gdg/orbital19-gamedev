@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CactusSpawner : MonoBehaviour
+public class CactusSpawnerV3 : MonoBehaviour
 {
     public float WaitTime = 2f;
     public GameObject Cactus;

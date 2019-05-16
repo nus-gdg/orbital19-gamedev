@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class GameManagerV3 : MonoBehaviour
 {
-    public CactusSpawner Spawner;
-    public PlayerController Player;
+    public CactusSpawnerV3 Spawner;
+    public PlayerControllerV3 Player;
     public Text CurrentTime;
     public Text BestTime;
 
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     public void OnPlayerHit()
     {
-        CactusObstacle.Speed = 0;
+        CactusObstacleV3.Speed = 0;
         Spawner.ShouldSpawn = false;
         hasGameEnded = true;
         if (time > PlayerPrefs.GetFloat("BestTime", 0))

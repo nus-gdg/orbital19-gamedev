@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerV3 : MonoBehaviour
 {
     public float JumpVelocity;
-    public GameManager GameManagerInstance;
+    public GameManagerV3 GameManagerInstance;
 
     private Rigidbody2D playerRigidbody;
     private Animator playerAnimator;

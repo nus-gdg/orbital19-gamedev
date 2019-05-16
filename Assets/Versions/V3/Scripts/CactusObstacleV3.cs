@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CactusObstacle : MonoBehaviour
+public class CactusObstacleV3 : MonoBehaviour
 {
     public static float Speed = 10f;
     private Rigidbody2D cactusRigidbody;
