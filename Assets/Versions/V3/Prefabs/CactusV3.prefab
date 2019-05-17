@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8370646903700219967}
   - component: {fileID: 3411946394255478114}
   m_Layer: 0
-  m_Name: Cactus
+  m_Name: CactusV3
   m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8370646903700219954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.51, y: -2.68, z: -4}
+  m_LocalPosition: {x: 8.51, y: -2.68, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

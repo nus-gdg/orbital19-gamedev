@@ -9,6 +9,7 @@ public class GameManagerV4 : MonoBehaviour
     public PlayerControllerV4 Player;
     public Text CurrentTime;
     public Text BestTime;
+    public GameObject UIButtons;
 
     private float bestTimeValue;
     private float time = 0;
@@ -37,7 +38,7 @@ public class GameManagerV4 : MonoBehaviour
 
     public void OnPlayerHit()
     {
-        CactusObstacleV3.Speed = 0;
+        CactusObstacleV4.Speed = 0;
         Spawner.ShouldSpawn = false;
         hasGameEnded = true;
         if (time > PlayerPrefs.GetFloat("BestTime", 0))
@@ -45,5 +46,6 @@ public class GameManagerV4 : MonoBehaviour
             PlayerPrefs.SetFloat("BestTime", time);
             BestTime.text = time.ToString();
         }
+        UIButtons.SetActive(true);
     }
 }
