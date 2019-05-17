@@ -10,12 +10,14 @@ public class PlayerControllerV4 : MonoBehaviour
 
     private Rigidbody2D playerRigidbody;
     private Animator playerAnimator;
+    private AudioSource[] playerSounds;
     private bool isDead = false;
 
     private void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        playerSounds = GetComponents<AudioSource>();
     }
 
     private void Update()
@@ -29,6 +31,7 @@ public class PlayerControllerV4 : MonoBehaviour
         {
             playerAnimator.SetBool("Jumping", true);
             playerRigidbody.velocity = new Vector2(0.0f, JumpVelocity);
+            playerSounds[0].Play();
         }
 
         if (playerAnimator.GetBool("Jumping") && playerRigidbody.velocity.y == 0.0f)
@@ -44,6 +47,7 @@ public class PlayerControllerV4 : MonoBehaviour
             isDead = true;
             playerAnimator.SetBool("Dead", true);
             GameManagerInstance.OnPlayerHit();
+            playerSounds[1].Play();
         }
     }
 }

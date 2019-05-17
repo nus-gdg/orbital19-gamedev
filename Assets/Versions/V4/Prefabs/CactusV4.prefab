@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 8370646903700219965}
   - component: {fileID: 8370646903700219964}
   - component: {fileID: 8370646903700219967}
+  - component: {fileID: 972694449882879995}
+  - component: {fileID: 1800290036320803778}
   - component: {fileID: 3411946394255478114}
   m_Layer: 0
-  m_Name: Cactus
+  m_Name: CactusV4
   m_TagString: Cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,7 +118,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004929781, y: 0.00206995}
+  m_Offset: {x: 0.004750252, y: -0.04310417}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -127,7 +129,59 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5832553, y: 1.8228555}
+  m_Size: {x: 0.5055351, y: 1.7325072}
+  m_EdgeRadius: 0
+--- !u!61 &972694449882879995
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370646903700219954}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.51304674, y: 0.02258706}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 1.57, y: 1.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.52717304, y: 0.8369384}
+  m_EdgeRadius: 0
+--- !u!61 &1800290036320803778
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8370646903700219954}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5098195, y: -0.22909606}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 1.57, y: 1.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.50781345, y: 0.84984565}
   m_EdgeRadius: 0
 --- !u!114 &3411946394255478114
 MonoBehaviour:
